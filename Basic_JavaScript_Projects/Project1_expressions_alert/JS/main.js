@@ -3,7 +3,7 @@ var message = "Hello from JavaScript!";
 //Setting an alert
 window.alert(message);
 
-// Using additional qotations
+// Using additional quotations
 document.write("With JavaScript when you need to use additional quotation marks the solution is to add a backslash \\ this is referred to as \"escaping\".<br><br>")
 
 //Concatenating a string
@@ -21,4 +21,29 @@ var Family = "Rocha\'s", Dad = "DJ", Mom = "JJ", Daughter = "Scar";
 document.write(Dad + "<br><br>");
 
 //Writing an expression
-document.writeln(Dad + " is the dad<br>");
+document.writeln(Dad + " is the dad<br><br>");
+
+
+
+// Basic JavaScript Projects Assignment
+
+// This is a window alert that will pop up when the page loads
+window.alert("Welcome to the JavaScript String Concatenation Project!");
+
+// Declare the first part of the sentence
+var Sent1 = "This is the beginning of the string";
+
+// Declare the second part of the sentence
+var Sent2 = " and this is the end of the string";
+
+// Concatenate both variables into one complete sentence
+var fullSentence = Sent1 + Sent2;
+
+// Use document.write() to display the result on the page
+document.write(fullSentence);
+
+// This is an example of a comment explaining what the code is doing
+// The fullSentence variable combines Sent1 and Sent2 and is displayed in the browser
+
+
+

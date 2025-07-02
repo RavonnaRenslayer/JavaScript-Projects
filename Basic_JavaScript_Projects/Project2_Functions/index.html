@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Date</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="displayDate()">The time is?</button>
+
+        <p id="demo"></p>
+
+            <script>
+            function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+            </script>
+    </div>
+
+    <!--Executing a math Function-->
+
+    <div>
+        <script>
+
+        function myFunction(p1, p2) {
+    return p1 * p2;
+}
+
+        let result = myFunction(4,3);
+            document.getElementById("demo").innerHTML = result;
+
+        </script>
+    </div>
+
+    <div>
+    <!--Operator Assignment-->
+
+        <h1 id="main-title">This text will will have a sentece added to it using the operator +=</h1>
+
+    <!-- Element with an id to be used in JS -->
+    <p id="message">The text has been added!</p>
+
+    </div>
+    
+    <script src="main.js"></script>
+
+</body>
+
+</html>
