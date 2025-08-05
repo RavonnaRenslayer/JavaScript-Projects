@@ -86,3 +86,6 @@ function Time_Function() {
 	document.getElementById("Time_of_day").innerHTML= Reply;
 	
 }
+
+
+
