@@ -12,7 +12,7 @@ function countdown() {
         seconds = seconds - 1;
         
         // Update the <p> element with the current seconds
-        timer.innerHTML = seconds;
+        timerDisplay.innerHTML = seconds;
 
         var time = setTimeout(tick, 1000); //The statement “setTimeout(tick, 1000);” means that the program is pausing for 1,000 milliseconds (i.e., 1 second).
         // When the timer reaches 0 or less, stop and alert
@@ -44,17 +44,17 @@ function countdown() {
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
          
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            if (n > slides.length) {slideIndex = 1; }
+            if (n < 1) {slideIndex = slides.length; }
             
             for (i = 0; i < slides.length; i++) {
-                slides[i].computedStyleMap.display = "none";
+                slides[i].style.display = "none";
             }
 
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
 
-        slides[slideIndex-1].computedStyleMap.display = "block";
-        dots[slideIndex-1].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
