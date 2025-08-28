@@ -10,7 +10,7 @@ function Call_Loop() {
 }
 
 //String Length
-let text = "The length property returns the length of a string"
+let text = "The length property returns the length of a string <br><br>"
 let length = text.length;
     document.getElementById("String_Length").innerHTML = length;
 
@@ -85,7 +85,7 @@ document.getElementById("Car_Object").innerHTML= car.description();
 //Break Statement
 //When break is encountered in a loop, the loop terminates immediately.
 
-let text = "";
+let output = "";
 
 for (let i = 0; i < 10; i++) {
     if (i === 3) {
@@ -94,3 +94,14 @@ for (let i = 0; i < 10; i++) {
     text += "The number is " + i + "<br>";
 }
 document.getElementById("Break_Statement").innerHTML = text;
+
+//Continue Statement
+//The continue statement skips the current iteration in a loop.
+
+text = "";
+
+for (let i = 1; i < 10; i++) {
+    if (i === 3) {continue;}
+    text += i*10 + "<br>";
+}
+document.getElementById("Continue_Statement").innerHTML = text;
