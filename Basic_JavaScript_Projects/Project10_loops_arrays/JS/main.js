@@ -62,3 +62,35 @@ document.write("<br><br>" + X);
         document.write("<br>" + X);
 }
 document.write("<br>" + X);
+
+//Return Statement stops the execution of a function and returns a value.
+function myFunction(name) {
+        return "Hello " + name;
+    }
+
+document.getElementById("Return_Statement").innerHTML= myFunction("John");
+
+//Object 
+let car = {
+    make: "Dodge ",
+    model: "Viper ",
+    year: "2021 ",
+    color: "red ",
+    description: function() {
+        return "The car is a " + this.year + this.color + this.make + this.model;
+    }
+};
+document.getElementById("Car_Object").innerHTML= car.description();
+
+//Break Statement
+//When break is encountered in a loop, the loop terminates immediately.
+
+let text = "";
+
+for (let i = 0; i < 10; i++) {
+    if (i === 3) {
+        break; 
+    }
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("Break_Statement").innerHTML = text;
