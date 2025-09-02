@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+	
+        <meta charset="UTF-8">
+        <title>Super Heroes</title>
+		
+    </head>
+
+	<body>
+        <h1>Click on the Universe and find out the character!</h1>
+        <!--Data Attribute-->
+        <div>
+            <p id="Characters"></p>
+            
+        </div>
+
+        <div>
+            <ul>
+                <li onclick="displayType (this)" id="DC"
+                    data-character-type="Batman">DC</li>
+
+                <li onclick="displayType (this) " id="Star Wars"
+                    data-character-type="Luke Skywalker">Star Wars</li>
+
+                <li onclick="displayType (this)" id="Marvel"
+                    data-character-type="Thor">Marvel</li>
+
+                <li onclick="displayType (this) " id="Star Trek"
+                    data-character-type="Jean-Luc Picard">Star Trek</li>
+            </ul>
+        </div>
+
+        <script src="JS/Main.js"></script>
+
+	</body>
+	
+</html>
