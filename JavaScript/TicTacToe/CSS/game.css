@@ -1,0 +1,66 @@
+/*This container includes our table and our canvas.*/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    height: 100vh;           /* full viewport height */
+    margin: 0;               /* remove default margin */
+    flex-direction: column;  /* stack h1 above game */
+    background-color: #f0f0f0; /* optional, for nicer look */
+}
+
+.center-container {
+    /*This property sets the width of our container*/
+    width: 608px;
+    height: 608px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+
+table {
+    /*This property collapses table border into 1 border.*/
+    border-collapse: collapse;
+    /*This hides outer borders on table*/
+    border-style: hidden;
+        /* Make the parent a flex container */
+    display: flex; 
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    align-items:center
+}
+
+td {
+    /*This property changes the cursor to the index finger hand when we hover over td elements.*/
+    cursor: pointer;
+    /*This property sets our table border style.*/
+    border: 4px solid rgba(208, 24, 33, 0.8);
+    /*This property removes default padding.*/
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+    filter: contrast(3);
+}
+
+canvas {
+    /*This property sets the position of our canvas to the top left corner of our container.*/
+    position: absolute;
+    z-index: 10;
+    /*This property places our canvas over the top of our table.*/
+    top: 0;
+    left: 0;
+    /*This property makes our canvas invisible.*/
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0; /* space between title and game board */
+    height: 5px;
+    color: #000;
+}
