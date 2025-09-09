@@ -1,3 +1,33 @@
+//Nav Bar
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll("#Nav a");
+
+  links.forEach(link => {
+    let timer;
+
+    link.addEventListener("mouseenter", (event) => {
+      // Prevent instant jump to anchor
+      event.preventDefault();
+
+      timer = setTimeout(() => {
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      }, 400); // wait 400ms before scrolling
+    });
+
+    link.addEventListener("mouseleave", () => {
+      clearTimeout(timer); // cancel if mouse leaves too quickly
+    });
+  });
+});
+    
 function getReceipt() {
     //This initializes our string so it can get passed from
     //function to function, growing line by line into a full receipt
