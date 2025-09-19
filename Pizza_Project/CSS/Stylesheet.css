@@ -1,0 +1,39 @@
+/*Pizza.css*/
+
+body {
+background-color: darkblue;
+}
+
+h1 {
+font-family: Helvetica;
+color: Owhite;
+text-align: center;
+}
+
+h3 {
+font-family: Arial;
+color: Osnow;
+}
+
+div {
+color: [1ightyellow;
+font-family: Monospace;
+}
+
+#menuBG {
+width: 400px;
+height: 470px;
+margin: 10px auto;
+}
+
+#frmMenu {
+width: 600px;
+height: 200px;
+}
+
+#totalprice {
+width: 200px;
+height: 190px;
+margin: 20px auto;
+float: right;
+}
