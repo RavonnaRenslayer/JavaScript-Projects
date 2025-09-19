@@ -16,24 +16,74 @@ color: Osnow;
 }
 
 div {
-color: [1ightyellow;
+color: 'lightyellow';
 font-family: Monospace;
 }
 
 #menuBG {
-width: 400px;
-height: 470px;
-margin: 10px auto;
+    width: 0px;
+    height: 0px;
+    margin: 10px auto;
 }
 
 #frmMenu {
-width: 600px;
-height: 200px;
+    width: 400px;
+    height: 200px;
+    place-content: 10px 10px;
 }
 
-#totalprice {
-width: 200px;
-height: 190px;
-margin: 20px auto;
-float: right;
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 20px auto;
+    float: right;
+}
+
+.size {
+    width: -18px;
+    height: 13px;
+    float: center;
+    
+}
+
+
+.veg {
+    width: 200px;
+    height: 200px;
+    float: center;
+}
+
+.meats {
+    width: 150px;
+    height: 200px;
+    float: center;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    top: 0;
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 25px auto;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .navbar {
+    width: 100%;
+  }
 }
