@@ -1,33 +1,142 @@
 /*Pizza.css*/
-ul {
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100vh;
+  display: flex;            
+  flex-direction: column;   
+  align-items: flex-start;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding-right: 15px;
+}
+
+#navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  width: 100%;
+  background-image: linear-gradient(to right, #B33C2E , #eac99cff);
 }
 
-li a {
+#navbar li a {
   display: block;
   color: black;
-  padding: 8px 16px;
+  padding: 10px;
   text-decoration: none;
+  text-align: center;
+  font-family: 'Lobster', cursive;
 }
 
 /* Change the link and background color on hover */
-li a:hover {
-  background-color: green;
-  color: white;
+#navbar li a:hover {
+  background-image: linear-gradient(to right, #F9C74F , #eac99cff);
+  color: #2E2E2E;;
+}
+
+#offers, #menu, #order, #about, #contact {
+  height: 100vh;         /* Full screen height */
+  display: flex;         /* Center content */
+  justify-content: center;
+  align-items: center;
+  color: #E63946;
+  font-size: 2rem;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;         /* side by side in a row */
+  align-items: stretch;     /* align items at top, you can change to center if you want */
+  justify-content: flex-start; /* image on left, offers to the right */
+  gap: 20px;                    /* space between image & offers */
+  padding: 20px;                /* optional space inside */
+  margin-top: 40vh;
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+  flex: 0 0 auto;
+  width: 40%;  
+  height: 60vh;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  border-style: ridge;
+  border-color: #2E2E2E;
+}
+
+/* Centered text */
+.centered, p {
+  position: absolute;
+  top: 5%;
+  left: 53%;
+  width: 350px;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-family: 'Lobster', cursive;
+}
+
+/* Offers container takes remaining space */
+#offers {
+  flex: 1;  /* occupy remaining space on the row */
+  display: flex;
+  flex-direction: column;  /* stack offer cards vertically, or change if you want multiple in a row */
+  gap: 15px;
+  margin-top: 0;  
+}
+
+/* Styling for individual offer cards */
+.offer-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  position: relative;
+  flex: 25%;
+  max-width: 90%;
+  height: 100vh;
+  padding: 0 4px;
+}
+
+.offer-card img {
+  margin-top: auto;
+  width: 50%;
+  height: 50%;
+  object-fit: fill;   /* scale/fit image nicely */
+}
+
+.text-container p {
+  font-size: 1rem;
+  color: #2E2E2E;
+  text-align: center;
+  margin: 0;   
+  font-family: 'Lobster', cursive;
 }
 
 body {
-    background-color: rgba(245, 245, 220, 0.836);
+  background-color: #C49A6C;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: red;
     text-align: center;
+}
+
+h2 {
+  color: #2E2E2E;
+  font-family: Nunito;
 }
 
 h3 {
@@ -37,15 +146,8 @@ h3 {
     text-align: center;
 }
 
-h2 {
-    color: red;
-    text-align: center;
-}
-
-div {
-    color: red;
-    font-family: monospace;
-    text-align: left;
+p {
+  color: #2E2E2E;
 }
 
 #menuBG {
@@ -107,4 +209,11 @@ div {
     height: 40px;
     display: block;
     margin: 25px auto;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .navbar {
+    width: 100%;
+  }
 }

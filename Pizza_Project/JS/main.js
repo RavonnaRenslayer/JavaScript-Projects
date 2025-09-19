@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-    
+  
 function getReceipt() {
     //This initializes our string so it can get passed from
     //function to function, growing line by line into a full receipt
@@ -37,7 +37,7 @@ function getReceipt() {
     var sizeArray = document.getElementsByClassName("size");
     for (var i = 0; i < sizeArray.length; i++) {
         if (sizeArray[i].checked) {
-            var selectedSize = sizeArray[i]value;
+            var selectedSize = sizeArray[i].value;
             text1 = text1 + selectedSize + "<br>";
         }
     }
