@@ -1,18 +1,29 @@
 /*Pizza.css*/
 
 body {
-background-color: darkblue;
+  background-color: #C49A6C;
 }
 
 h1 {
-font-family: Helvetica;
-color: Owhite;
-text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+}
+
+h2 {
+  color: #2E2E2E;
+  font-family: Nunito;
 }
 
 h3 {
-font-family: Arial;
-color: Osnow;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+  color: #2E2E2E;
 }
 
 div {
@@ -20,8 +31,19 @@ color: 'lightyellow';
 font-family: Monospace;
 }
 
+label {
+    display: block;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;    
+}
+
 #menuBG {
-    width: 0px;
+    width: 100vh;
     height: 0px;
     margin: 10px auto;
 }
@@ -40,12 +62,10 @@ font-family: Monospace;
 }
 
 .size {
-    width: -18px;
+    width: 200px;
     height: 13px;
-    float: center;
-    
+    float: left;
 }
-
 
 .veg {
     width: 200px;
@@ -79,6 +99,7 @@ font-family: Monospace;
     height: 40px;
     display: block;
     margin: 25px auto;
+    color: olivedrab;
 }
 
 @media (max-width: 768px) {
