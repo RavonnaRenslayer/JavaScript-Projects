@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function getReceipt() {
     //This initializes our string so it can get passed from
     //function to function, growing line by line into a full receipt
-    var text1 = "<h3>You Ordered:</h3>";
+    var text1 = "<h3>Order placed:</h3>";
     var runningTotal = 0;
     var sizeTotal = 0;
     var sizeArray = document.getElementsByClassName("size");
