@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lan="en">
+	<head>
+		<title>Icecream Parlour</title>
+			<div>
+				<video width="320" height="240" controls>
+					<source src="./Icecream_Parlour/Videos/Logo.mp4" type="video/mp4">
+						Looks like your browser does not support the video tag – use Google Chrome!
+				</video>
+			</div>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./Icecream_Parlour/CSS/css-animations.css">
+	</head>
+
+	<body>
+
+		<!-- NAV -->
+		<div>
+			<div>
+				<ul>
+					<a href="#HOME" id="link"><li>HOME</li></a>
+					<a href="#FLAVOURS" id="link"><li>FLAVOURS</li></a>
+					<a href="#CONTACT" id="link"><li>CONTACT</li></a>
+				</ul>
+			</div>
+		</div>
+		<!-- END NAV -->
+
+		<!-- HOME -->
+		<div id="home">
+			<div>
+				<span>Sweet Treats, Cool Eats!</span>
+					<div>
+						<img src="./Icecream_Parlour/Images/thumbnail.jpeg" alt="Multiflavour icecream">
+					</div>
+			</div>
+		</div>
+		<!-- END HOME -->
+
+<div class="row">
+  <div class="column">
+    <img src="./Images/main.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./Images/thumbnail.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./Images/thumbnail1.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./Images/img4_wide.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="./Images/main.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="./Images/thumbnail.jpeg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="./Images/thumbnail1.jpeg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="./Images/img4_wide.jpg">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="row">
+      <div class="column">
+        <img class="demo" src="./Images/main.jpg" onclick="currentSlide(1)" alt="Nature">
+      </div>
+      <div class="column">
+        <img class="demo" src="./Images/thumbnail.jpeg" onclick="currentSlide(2)" alt="Snow">
+      </div>
+      <div class="column">
+        <img class="demo" src="./Images/thumbnail1.jpeg" onclick="currentSlide(3)" alt="Mountains">
+      </div>
+      <div class="column">
+        <img class="demo" src="./Images/img4_wide.jpg" onclick="currentSlide(4)" alt="Lights">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+		<section>
+			<div id="Flavours">
+				<h1>Flavours</h1>
+				
+					<!-- PHOTO-CONTAINER 1 -->
+					<div>
+						<div>
+							<img src="./Icecream_Parlour/Images/thumbnail1.jpeg" alt="Chocolate">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>Chocolate</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- PHOTO-CONTAINER 2 -->
+					<div>
+						<div>
+							<img src="./Icecream_Parlour/Images/thumbnail2.jpeg" alt="Strawberry">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>Strawberry</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- PHOTO-CONTAINER 3 -->
+					<div>
+						<div>
+							<img src="./Icecream_Parlour/Images/thumbnail3.jpeg" alt="Coconut">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>Coconut</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- PHOTO-CONTAINER 4 -->
+					<div>
+						<div>
+							<img src="./Icecream_Parlour/Images/thumbnail4.jpeg" alt="Vanilla">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>Vanilla</p>
+							</div>
+						</div>
+					</div>
+					<!-- END PHOTO-CONTAINER -->
+			</div>
+		</section>
+		<!-- END FLAVOURS -->
+		
+		<!-- RSVP -->
+		<section>
+			<div id="contact">
+				<div>
+					<h2><span>Want to know more?</span>
+					<br>Contact us!
+					</h2>
+					<div>
+						<form action="" method="post">
+							<input class="rsvp" type="text" value="First Name">
+							<input class="rsvp" type="text" value="Last Name">
+							<input class="rsvp" type="text" value="Email">
+							<input class="rsvp" type="text" value="Phone Number">
+							<div class="Contact Us">
+								<label class="terms">Terms and Conditions</label>
+							</div>
+							<div>
+								<input type="submit" value="Submit">
+							</div>
+						</form>
+					</div>
+							
+				</div>
+			</div>
+		</section>
+		<!-- END RSVP -->
+
+		<!-- FOOTER -->
+			<div>
+				&nbsp;| &nbsp; &copy; 2025
+			</div>
+		<!-- END FOOTER -->
+            <script src="./JS/main.js"></script>
+
+	</body>
+</html>
