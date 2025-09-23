@@ -9,7 +9,7 @@
 				</video>
 			</div>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="./Icecream_Parlour/CSS/css-animations.css">
+		<link rel="stylesheet" href="./CSS/style.css">
 	</head>
 
 	<body>
@@ -26,31 +26,21 @@
 		</div>
 		<!-- END NAV -->
 
-		<!-- HOME -->
-		<div id="home">
-			<div>
-				<span>Sweet Treats, Cool Eats!</span>
-					<div>
-						<img src="./Icecream_Parlour/Images/thumbnail.jpeg" alt="Multiflavour icecream">
-					</div>
-			</div>
-		</div>
-		<!-- END HOME -->
-
-<div class="row">
-  <div class="column">
-    <img src="./Images/main.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="./Images/thumbnail.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="./Images/thumbnail1.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="./Images/img4_wide.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-  </div>
-</div>
+        <div class="row">
+            <div class="column">
+                <img src="./Images/thumbnail1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./Images/thumbnail2.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./Images/thumbnail3.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./Images/thumbnail4.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+        </div>
 
 <!-- Modal/Lightbox -->
 <div id="myModal" class="modal">
@@ -58,23 +48,23 @@
   <div class="modal-content">
 
     <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="./Images/main.jpg">
-    </div>
-
-    <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="./Images/thumbnail.jpeg">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
       <img src="./Images/thumbnail1.jpeg">
     </div>
 
     <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="./Images/thumbnail2.jpeg">
+    </div>
+
+    <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="./Images/img4_wide.jpg">
+      <img src="./Images/thumbnail3.jpeg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="./Images/thumbnail4.jpeg">
     </div>
 
     <!-- Next/previous controls -->
@@ -89,73 +79,23 @@
     <!-- Thumbnail image controls -->
     <div class="row">
       <div class="column">
-        <img class="demo" src="./Images/main.jpg" onclick="currentSlide(1)" alt="Nature">
+        <img class="demo" src="./Images/thumbnail1.jpeg" onclick="currentSlide(1)" alt="Chocolate">
       </div>
       <div class="column">
-        <img class="demo" src="./Images/thumbnail.jpeg" onclick="currentSlide(2)" alt="Snow">
+        <img class="demo" src="./Images/thumbnail2.jpeg" onclick="currentSlide(2)" alt="Strawberry">
       </div>
       <div class="column">
-        <img class="demo" src="./Images/thumbnail1.jpeg" onclick="currentSlide(3)" alt="Mountains">
+        <img class="demo" src="./Images/thumbnail3.jpeg" onclick="currentSlide(3)" alt="Chocolate Chip">
       </div>
       <div class="column">
-        <img class="demo" src="./Images/img4_wide.jpg" onclick="currentSlide(4)" alt="Lights">
+        <img class="demo" src="./Images/thumbnail4.jpeg" onclick="currentSlide(4)" alt="Vanilla">
       </div>
     </div>
 
   </div>
 </div>
 
-		<section>
-			<div id="Flavours">
-				<h1>Flavours</h1>
-				
-					<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img src="./Icecream_Parlour/Images/thumbnail1.jpeg" alt="Chocolate">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Chocolate</p>
-							</div>
-						</div>
-					</div>
-					
-					<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<div>
-							<img src="./Icecream_Parlour/Images/thumbnail2.jpeg" alt="Strawberry">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Strawberry</p>
-							</div>
-						</div>
-					</div>
-					
-					<!-- PHOTO-CONTAINER 3 -->
-					<div>
-						<div>
-							<img src="./Icecream_Parlour/Images/thumbnail3.jpeg" alt="Coconut">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Coconut</p>
-							</div>
-						</div>
-					</div>
-					
-					<!-- PHOTO-CONTAINER 4 -->
-					<div>
-						<div>
-							<img src="./Icecream_Parlour/Images/thumbnail4.jpeg" alt="Vanilla">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Vanilla</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER -->
-			</div>
-		</section>
-		<!-- END FLAVOURS -->
+
 		
 		<!-- RSVP -->
 		<section>
