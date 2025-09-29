@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Basic AJAX Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .content { margin-bottom: 20px; }
+        .button { padding: 8px 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Get The Latest Content:</h2>
+
+        <!-- Section 1: Local content.html -->
+        <div class="content" id="content">
+            <input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();" />
+        </div>
+
+        <!-- Section 2: JSON placeholder API -->
+        <h2>JSON Placeholder API Content:</h2>
+        <div class="content" id="api-content">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Function to fetch content.html and inject it
+        function getContent() {
+            var ajax = new XMLHttpRequest();
+
+            ajax.open('GET', 'content.html', true);
+
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState === 4) {
+                    if (ajax.status === 200) {
+                        document.getElementById('content').innerHTML = ajax.responseText;
+                        document.getElementById('btn_content').style.display = 'none';
+                    } else {
+                        document.getElementById('content').innerHTML = "Error loading content: " + ajax.status;
+                    }
+                }
+            };
+
+            ajax.send();
+        }
+
+        // Separate request: fetch JSON from API and render on page
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                var apiContentDiv = document.getElementById('api-content');
+
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText); // Convert JSON string to object
+                    apiContentDiv.innerHTML = 
+                        "<h3>" + data.title + "</h3>" +
+                        "<p>" + data.body + "</p>";
+                } else {
+                    apiContentDiv.innerHTML = "Error loading content: " + xhr.status;
+                }
+            }
+        };
+
+        xhr.send();
+    </script>
+</body>
+</html>
+
