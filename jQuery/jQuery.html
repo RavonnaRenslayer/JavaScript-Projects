@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-	
-        <meta charset="UTF-8">
-        <title></title>
-        <script src = https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js></script>
-		
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Example</title>
+    <!-- Load jQuery library from Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
 
-    <body>
+<body>
     <script>
-        $(document).ready(function() {
+        // Run code only after the DOM is fully loaded
+        $(document).ready(function () {
+
+            // Dynamically add HTML structure inside <body>
             $("body").append(
                 "<div id='container'>\
                     <div id='inner'>\
@@ -19,16 +21,39 @@
                         <p id='p1'>Paragraph 1</p>\
                         <p id='p2'>Paragraph 2</p>\
                         <p id='p3'>Paragraph 3</p>\
+                        <div class='hidden'>I was hidden, now shown!</div>\
                     </div>\
                 </div>"
             );
 
-            $("#p2").css({"color": "red"});
+            // Change text color of Paragraph 2 to red
+            $("#p2").css({ "color": "red" });
 
-            $("#p3").click(function() {
+            // When Paragraph 3 is clicked, hide the <h1> element
+            $("#p3").click(function () {
                 $("h1").hide();
             });
+
+            // Attach a one-time click event to Paragraph 1
+            $("#p1").one("click", firstClick);
+
+            // Function runs the first time Paragraph 1 is clicked
+            function firstClick() {
+                console.log("You just clicked this for the first time!");
+
+                // After first click, attach a new click handler
+                $(this).click(function () {
+                    console.log("You have clicked this before!");
+                });
+            }
+
+            // Hide all <p> elements with a slow animation
+            $("p").hide("slow");
+
+            // Show any <div> elements with class="hidden" using a fast animation
+            $("div.hidden").show("fast");
         });
     </script>
 </body>
+
 </html>
