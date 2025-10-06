@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+	
+        <meta charset="UTF-8">
+        <title>XML</title>
+		
+    </head>
+
+	<body>
+        <p id="XML_Example"></p>
+
+        <script>
+            var XML_Parser, XML_Document;
+
+                //creates a text string
+                var Movie= 
+                    <movies>
+                        <movie>
+                        <title>Hunger Games</title>
+                        <director>Garry Ross/director>
+                        <starring> Jennifer Lawrence as Katniss Everdeen and Josh Hutcherson as Peeta Mellark</starring>
+                        <year>2012</year>
+                        </movie>
+                    </movies>;
+                
+            //creates an XML DOM parser
+            XML_Parser = new DOMParser();
+
+            //creates a new XML DOM object using the text string
+            XML_Document = XML_Parser.parseFromString(Movie,"text/xml");
+
+            document.getElementById(XML_Example).innerHTML = 
+            XML_Document.getElementsByTagName("title")[0].nodeValue;
+
+        </script>
+	</body>
+	
+</html>
