@@ -12,27 +12,27 @@
         <p id="XML_Example"></p>
 
         <script>
-            var XML_Parser, XML_Document;
 
                 //creates a text string
-                var Movie= 
+                var Movie = `
                     <movies>
                         <movie>
-                        <title>Hunger Games</title>
-                        <director>Garry Ross/director>
-                        <starring> Jennifer Lawrence as Katniss Everdeen and Josh Hutcherson as Peeta Mellark</starring>
-                        <year>2012</year>
+                            <title>Hunger Games</title>
+                            <director>Garry Ross</director>
+                            <starring> Jennifer Lawrence as Katniss Everdeen and Josh Hutcherson as Peeta Mellark</starring>
+                            <year>2012</year>
                         </movie>
-                    </movies>;
+                    </movies>`;
                 
             //creates an XML DOM parser
-            XML_Parser = new DOMParser();
+            var XML_Parser = new DOMParser();
 
             //creates a new XML DOM object using the text string
-            XML_Document = XML_Parser.parseFromString(Movie,"text/xml");
+            var XML_Document = XML_Parser.parseFromString(Movie,"text/xml");
 
-            document.getElementById(XML_Example).innerHTML = 
-            XML_Document.getElementsByTagName("title")[0].nodeValue;
+            var title = XML_Document.getElementsByTagName("title")[0].textContent;
+
+            document.getElementById("XML_Example").innerHTML = title;
 
         </script>
 	</body>
