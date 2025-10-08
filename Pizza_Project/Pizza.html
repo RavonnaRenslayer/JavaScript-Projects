@@ -19,11 +19,12 @@
 
                                 </head>
 
-<body>
+<body>   
+
         <div id="menuBG">
             
             <form id="frmMenu">
-                <h1>Pizza Drill</h1>
+                <h1 style="font-size: 5vw;">Pizza Drill</h1>
                     <h3>Place Your Order</h3>
                     <div class="menu size">
                         <h3>Size:</h3>
@@ -65,7 +66,31 @@
 
             </form>
         </div>
-        <script src="JS/main.js"></script>
+
+        <div id="popupForm" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Enter Your Details</h2>
+
+            <form id="detailsform" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
+                <label>Name:</label> 
+                <input type="text" name="fname">
+
+                <label>Address:</label> 
+                <input type="text" name="faddress">
+
+                <label>Phone Number:</label> 
+                <input type="text" name="fphonenumber">
+
+                <input type="submit" value="submit">
+
+            </form>
+            </div>
+        </div>
+
+        <script src="JS/Main.js"></script>
+
 	</body>
 	
 </html>

@@ -27,7 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-  
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+                });
+
+
 function getReceipt() {
     //This initializes our string so it can get passed from
     //function to function, growing line by line into a full receipt
@@ -42,6 +48,10 @@ function getReceipt() {
         }
     }
 
+    if (selectedSize === "") {
+      alert("Please select a pizza size before ordering!");
+      return;
+    }
 
 if (selectedSize === "Personal Pizza") {
     sizeTotal = 6;
@@ -62,28 +72,53 @@ getTopping(runningTotal, text1);//These variables will be passed on to each func
 };
 
 function getTopping(runningTotal, text1) {
-    var toppingTotal = 0;
-    var selectedTopping = [];
-    var toppingArray = document.getElementsByClassName("toppings");
-    for (var j = 0; j < toppingArray.length; j++) {
-        if (toppingArray[j].checked) {
-            selectedTopping.push(toppingArray[j].value);
-            console.log("selected topping item: (" + toppingArray[j].value + ")");
-            text1 = text1 + toppingArray[j].value + "<br>";
-        }
-    }
+  var toppingTotal = 0;
+  var selectedTopping = [];
+  var toppingArray = document.getElementsByClassName("toppings");
 
-    var toppingCount = selectedTopping.length;
-    if (toppingCount > 1) {
-        toppingTotal = (toppingCount - 1);
-    } else {
-        toppingTotal = 0;
+  for (var j = 0; j < toppingArray.length; j++) {
+    if (toppingArray[j].checked) {
+      selectedTopping.push(toppingArray[j].value);
+      text1 += toppingArray[j].value + "<br>";
     }
-    runningTotal = (runningTotal + toppingTotal);
-    console.log("total selected topping items: " + toppingCount);
-    console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
-    console.log("topping text1: " + text1);
-    console.log("Purchse Total: " + "$" + runningTotal + ".00");
-    document.getElementById("showText").innerHTML = text1;
-    document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
-};
+  }
+
+  var toppingCount = selectedTopping.length;
+  toppingTotal = toppingCount > 1 ? toppingCount - 1 : 0;
+  runningTotal += toppingTotal;
+
+  // Display order summary
+  document.getElementById("showText").innerHTML = text1;
+  document.getElementById("totalPrice").innerHTML =
+    "<h3>Total: <strong>$" + runningTotal + ".00</strong></h3>";
+
+  // ✅ Show the modal
+  var modal = document.getElementById("popupForm");
+  var modalContent = document.querySelector(".modal-content h2");
+
+    var oldSummary = modalContent.querySelector(".order-summary");
+    if (oldSummary) oldSummary.remove();
+
+    modalContent.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="order-summary">
+      <p><strong>Your Order:</strong><br>${text1}<br>
+      <strong>Total: $${runningTotal}.00</strong></p>
+      </div>`
+    );
+    
+  modal.style.display = "block";
+
+  // Close modal when clicking the "X"
+  var closeBtn = document.querySelector(".close");
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // ✅ Corrected window click handler
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
