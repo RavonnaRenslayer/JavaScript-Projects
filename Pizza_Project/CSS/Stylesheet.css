@@ -1,4 +1,8 @@
 /* Pizza.css */
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     background-image: url('../Images/background.jpg');    
@@ -6,8 +10,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    padding: 0;
     opacity: 0;
     transition: opacity 2s ease-in;
 }
@@ -20,14 +22,6 @@ html {
   background-color: black;
 }
 
-h1 {
-    font-family: 'Lobster', cursive;
-    color: red;
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 20px;
-}
-
 h2 {
     color: #2E2E2E;
     font-family: Nunito, sans-serif;
@@ -35,10 +29,30 @@ h2 {
 
 h3 {
     color: green;
-    font-size: 20px;
+    font-size: 30px;
     text-align: start;
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
-    margin-top: 10px;
+    margin-top: 0px;
+}
+
+#titleContainer {
+    display: flex;               /* side-by-side */
+    flex-direction: column;         /* default, row is optional */
+    align-items: center;         /* vertically center h3 and image */
+    justify-content: flex-start; /* keep at left, or use center/right if needed */
+}
+
+#titleContainer h3 {
+    text-align: top;
+    margin: 0;                
+}
+
+#frmMenu img {
+    width: 200px;                /* adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0;
+    align-self: center;
 }
 
 p {
@@ -62,19 +76,20 @@ input[type="checkbox"] {
 
 #menuBG {
     display: flex;
+    align-items: column;
     justify-content: center; /* Center for smaller screens */
-    padding: 20px;
     width: 100%;
     height: auto; /* Let it grow with content */
     box-sizing: border-box;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 #frmMenu {
     width: 100%;
     max-width: 400px; /* Keep max width for large screens */
-    min-height: 300px;
     background: rgba(234, 201, 156, 0.9);
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
     display: flex;
@@ -82,6 +97,7 @@ input[type="checkbox"] {
     gap: 10px;
     box-sizing: border-box;
 }
+
 
 #totalPrice {
     padding: 5px;
@@ -125,10 +141,9 @@ input[type="checkbox"] {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
+    z-index: 9999;
+    top: 0;
     left: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -136,16 +151,39 @@ input[type="checkbox"] {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
+    background-color: rgba(234, 201, 156, 1.9);
     margin: auto;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
     text-align: left;
+    animation: mymove 5s infinite;   
+}
+
+
+@keyframes mymove {
+  from {transform: translateY(0px);}
+  to {transform: translateY(40px);}
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }    
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
 }
 
 .close {
-    color: #aaa;
+    color: #2E2E2E;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -156,6 +194,26 @@ input[type="checkbox"] {
 .close:focus {
     color: black;
     text-decoration: none;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#detailsform input[type="submit"] {
+    background-color: olivedrab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#detailsform input[type="submit"]:hover {
+    background-color: darkgreen;
 }
 
 /* Responsive adjustments */
@@ -225,5 +283,11 @@ input[type="checkbox"] {
 
     h3 {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    #titleContainer img {
+        width: 100px;  /* smaller image for mobile */
     }
 }
