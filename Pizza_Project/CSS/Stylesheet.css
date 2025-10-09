@@ -1,4 +1,6 @@
 /* Pizza.css */
+
+/* ---------------------- Base Styles ---------------------- */
 html, body {
     margin: 0;
     padding: 0;
@@ -19,7 +21,7 @@ body.fade-in {
 }
 
 html {
-  background-color: black;
+    background-color: black;
 }
 
 h2 {
@@ -32,14 +34,15 @@ h3 {
     font-size: 30px;
     text-align: start;
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
+/* ---------------------- Header Container ---------------------- */
 #titleContainer {
-    display: flex;               /* side-by-side */
-    flex-direction: column;         /* default, row is optional */
-    align-items: center;         /* vertically center h3 and image */
-    justify-content: flex-start; /* keep at left, or use center/right if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #titleContainer h3 {
@@ -47,14 +50,7 @@ h3 {
     margin: 0;                
 }
 
-#frmMenu img {
-    width: 200px;                /* adjust as needed */
-    height: auto;
-    display: block;
-    margin: 0;
-    align-self: center;
-}
-
+/* ---------------------- Text & Labels ---------------------- */
 p {
     color: #2E2E2E;
 }
@@ -74,12 +70,13 @@ input[type="checkbox"] {
     margin-right: 8px;    
 }
 
+/* ---------------------- Menu ---------------------- */
 #menuBG {
     display: flex;
-    align-items: column;
-    justify-content: center; /* Center for smaller screens */
+    align-items: column;  /* note: invalid value, kept as original */
+    justify-content: center;
     width: 100%;
-    height: auto; /* Let it grow with content */
+    height: auto;
     box-sizing: border-box;
     padding-top: 0;
     margin-top: 0;
@@ -87,7 +84,7 @@ input[type="checkbox"] {
 
 #frmMenu {
     width: 100%;
-    max-width: 400px; /* Keep max width for large screens */
+    max-width: 400px;
     background: rgba(234, 201, 156, 0.9);
     padding: 10px 20px 20px 20px;
     border-radius: 12px;
@@ -98,7 +95,22 @@ input[type="checkbox"] {
     box-sizing: border-box;
 }
 
+#frmMenu img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0;
+    align-self: center;
+    animation: zoominoutsinglefeatured 15s forwards;
+}
 
+@keyframes zoominoutsinglefeatured {
+    0% { transform: scale(1,1); }
+    50% { transform: scale(1.2,1.2); }
+    100% { transform: scale(1,1); }
+}
+
+/* ---------------------- Cart & Price ---------------------- */
 #totalPrice {
     padding: 5px;
     text-align: right;
@@ -138,6 +150,7 @@ input[type="checkbox"] {
     background: darkgreen;
 }
 
+/* ---------------------- Modal ---------------------- */
 .modal {
     display: none;
     position: fixed;
@@ -153,41 +166,53 @@ input[type="checkbox"] {
 .modal-content {
     display: flex;
     flex-direction: row;
-    align-self: flex-start;
-    justify-content: space-between;
+    align-items: start;
+    justify-content: flex-start;
     background-color: rgba(234, 201, 156, 1.9);
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    width: 50%;
+    width: 60%;
+    max-width: 900px;
+    gap: 40px;
+    box-sizing: border-box;
+    position: relative;
     text-align: left;
-    animation: mymove 5s infinite;   
+    animation: mymove 5s;
 }
-
 
 @keyframes mymove {
-  from {transform: translateY(0px);}
-  to {transform: translateY(40px);}
+    from { transform: translateY(0px); }
+    to { transform: translateY(40px); }
 }
 
-@keyframes zoominoutsinglefeatured {
-    0% {
-        transform: scale(1,1);
-    }    
-    50% {
-        transform: scale(1.2,1.2);
-    }
-    100% {
-        transform: scale(1,1);
-    }
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.form-logo {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    width: 40%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .close {
+    position: absolute;
     color: #2E2E2E;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 10px;
 }
 
 .close:hover,
@@ -201,6 +226,26 @@ input[type="checkbox"] {
     margin-top: 10px;
 }
 
+#detailsform {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#detailsform label {
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+#detailsform input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid;
+}
+
 #detailsform input[type="submit"] {
     background-color: olivedrab;
     color: white;
@@ -212,11 +257,7 @@ input[type="checkbox"] {
     transition: background 0.3s ease;
 }
 
-#detailsform input[type="submit"]:hover {
-    background-color: darkgreen;
-}
-
-/* Responsive adjustments */
+/* ---------------------- Responsive ---------------------- */
 @media (max-width: 768px) {
     #menuBG {
         flex-direction: column;
@@ -239,55 +280,37 @@ input[type="checkbox"] {
         width: 100%;
         max-width: 100%;
     }
-}
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    h3 {
-        font-size: 18px;
+    .form-container {
+        align-items: center;
+    }
+
+    .form-logo {
+        margin-top: 20px;
+        margin-left: 0;
     }
 }
-
 
 @media (max-width: 768px) {
-    #menuBG {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    #frmMenu {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        padding: 15px;
-    }
-
-    #cart {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #btnOrder {
-        width: 100%;
-        max-width: 100%;
+    .form-logo {
+        position: relative; /* stack below form */
+        width: 60%;         /* smaller for mobile */
+        max-width: 150px;
+        top: 0;             /* reset top offset */
+        margin-top: 20px;   /* optional spacing */
+        pointer-events: none;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 600px) {
-    #titleContainer img {
-        width: 100px;  /* smaller image for mobile */
+    .form-logo {
+        width: 80%;
+        max-width: 120px;
     }
 }
