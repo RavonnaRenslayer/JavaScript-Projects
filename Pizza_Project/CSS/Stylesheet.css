@@ -37,6 +37,24 @@ h3 {
     margin-top: 0;
 }
 
+/* ---------------------- Slideshow ---------------------- */
+#slideshow {
+    margin: 50% auto;
+    position: relative;
+    width: 240%;
+    height: 240%;
+    padding: 10px;
+    box-shadow: 0 0 20% rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+}
+
 /* ---------------------- Header Container ---------------------- */
 #titleContainer {
     display: flex;
@@ -178,7 +196,7 @@ input[type="checkbox"] {
     box-sizing: border-box;
     position: relative;
     text-align: left;
-    animation: mymove 5s;
+    animation: mymove 5s forwards 1;
 }
 
 @keyframes mymove {
@@ -212,7 +230,7 @@ input[type="checkbox"] {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 10px;
+    z-index: 1000;
 }
 
 .close:hover,
@@ -255,6 +273,11 @@ input[type="checkbox"] {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
+}
+
+#detailsform a[href^="mailto:"] {
+   font-family: 'Nunito', Arial, Helvetica, sans-serif;
+   align-self: flex-end;
 }
 
 /* ---------------------- Responsive ---------------------- */
