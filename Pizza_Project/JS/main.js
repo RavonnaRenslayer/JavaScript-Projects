@@ -29,9 +29,36 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-        window.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('fade-in');
-                });
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('fade-in');
+        });
+     
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("slideshowModal");
+    const closeBtn = document.getElementById("closeSlideshow");
+
+    modal.style.display = "flex";
+
+    closeBtn.addEventListener("click", () => modal.style.display = "none");
+    modal.addEventListener("click", (e) => { if(e.target === modal) modal.style.display = "none"; });
+
+    const videos = document.querySelectorAll("#slideshow video");
+    let current = 0;
+
+    if (videos.length > 0) {
+        videos[current].classList.add("active");
+        setInterval(() => {
+            const prev = current;
+            current = (current + 1) % videos.length;
+            videos[current].classList.add("active");
+            setTimeout(() => {
+                videos[prev].classList.remove("active");
+            }, 5000); 
+        }, 10000);
+    }
+});
+
 
 
 function getReceipt() {

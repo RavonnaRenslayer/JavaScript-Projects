@@ -21,19 +21,24 @@
 
 <body>   
 
-    <div id="slideshow">
-        <div>
-            <source src="./Videos/Margherita.mp4" type="video/mp4" alt="Marguerita_Pizza">
-        </div>
-        <div>
-            <source src="./Videos/Pepperoni.mp4" type="video/mp4" alt="Pepperoni">
-        </div>
-        <div>
-            <source src="./Videos/Veggie.mp4" type="video/mp4" alt="Veggie_Pizza">     
-        </div>
+    <div id="slideshowModal" class="modal">
+        <div id="slideshow">
+            <video id="introVideo" autoplay muted loop>
+                <source src="./Videos/Margherita.mp4" type="video/mp4" alt="Marguerita_Pizza">
+            </video>
+
+            <video autoplay muted loop>
+            <source src="./Videos/Pepperoni.mp4" type="video/mp4" alt="Pepperoni_Pizza">
+            </video>
+
         
+            <video autoplay muted loop>
+            <source src="./Videos/Veggie.mp4" type="video/mp4" alt="Veggie_Pizza">    
+            </video> 
+        <button id="closeSlideshow">×</button>
     </div>
 
+      <main id="mainContent" style="display: none;">
         <div id="menuBG">
             
             <form id="frmMenu">
@@ -82,6 +87,8 @@
 
             </form>
         </div>
+
+      </main>
 
         <div id="popupForm" class="modal">
             <div class="modal-content">

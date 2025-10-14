@@ -4,6 +4,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -38,21 +41,54 @@ h3 {
 }
 
 /* ---------------------- Slideshow ---------------------- */
-#slideshow {
-    margin: 50% auto;
-    position: relative;
-    width: 240%;
-    height: 240%;
-    padding: 10px;
-    box-shadow: 0 0 20% rgba(0, 0, 0, 0.4);
+#slideshowModal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-#slideshow > div {
+#slideshow {
+  position: relative;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 80vw;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slideshow video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 2s ease-in-out;
+}
+
+#slideshow video.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+#closeSlideshow {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
 }
 
 /* ---------------------- Header Container ---------------------- */
@@ -335,5 +371,26 @@ input[type="checkbox"] {
     .form-logo {
         width: 80%;
         max-width: 120px;
+    }
+}
+
+@media (max-width: 1920px) {
+    #slideshowModal #slideshow {
+        width: 90vw;
+        height: 90vw; /* maintain square aspect ratio */
+    }
+}
+
+@media (max-height: 800px) {
+    #slideshowModal #slideshow {
+        height: 90vh;
+        width: 90vh; /* maintain square aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    #slideshowModal #slideshow {
+        width: 95vw;
+        height: 95vw;
     }
 }
