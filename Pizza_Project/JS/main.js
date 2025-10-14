@@ -75,6 +75,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openSignup");
+  const popupForm = document.getElementById("popupForm");
+  const closeBtn = popupForm.querySelector(".close");
+
+  openBtn.addEventListener("click", () => {
+    popupForm.classList.add("show");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popupForm.classList.remove("show");
+  });
+
+  // Optional: close when clicking outside modal content
+  popupForm.addEventListener("click", (e) => {
+    if (e.target === popupForm) popupForm.classList.remove("show");
+  });
+});
+
 
 function getReceipt() {
     //This initializes our string so it can get passed from
