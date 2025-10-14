@@ -37,27 +37,42 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("slideshowModal");
     const closeBtn = document.getElementById("closeSlideshow");
+    const mainContent = document.getElementById("mainContent");
 
     modal.style.display = "flex";
 
-    closeBtn.addEventListener("click", () => modal.style.display = "none");
-    modal.addEventListener("click", (e) => { if(e.target === modal) modal.style.display = "none"; });
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      mainContent.style.display = "block";
+    });
+
+    modal.addEventListener("click", (e) => { 
+      if(e.target === modal) {
+        modal.style.display = "none"; 
+      mainContent.style.display = "block";
+      }
+    });
 
     const videos = document.querySelectorAll("#slideshow video");
     let current = 0;
 
     if (videos.length > 0) {
         videos[current].classList.add("active");
+        videos[current].play();
+
         setInterval(() => {
-            const prev = current;
-            current = (current + 1) % videos.length;
-            videos[current].classList.add("active");
-            setTimeout(() => {
-                videos[prev].classList.remove("active");
-            }, 5000); 
-        }, 10000);
-    }
-});
+          const prev = current;
+          current = (current +1) % videos.length;
+
+          videos[prev].pause();
+          videos[prev].currentTime = 0;
+          videos[prev].classList.remove("active");
+
+          videos[current].classList.add("active");
+          videos[current].play();
+        }, 7000);
+      }
+    });
 
 
 
