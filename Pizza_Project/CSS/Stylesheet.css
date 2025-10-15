@@ -59,77 +59,85 @@ h3 {
    font-family: 'Nunito', Arial, Helvetica, sans-serif;
 }
 
-.modal-body form fieldset {
-    border: none;
-    margin: 0 0 15px 0;
-}
-
-.modal {
-    display: none;                /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(102, 98, 98); /* semi-transparent background */
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
+.button:hover {
+  background-color: rgb(78, 123, 5);
 }
 
 .modal-content {
     position: relative;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 350px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 30px 30px;
+    border-radius: 8px;
+    background: white;
+    max-width: 400px;
+    margin: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+/* Reuse modal base styles but isolate the deals modal */
+.deal-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1100; /* slightly above existing modal */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.deal-modal.show {
+  display: block;
+}
+
+/* Optional - improve modal-content appearance */
+.deal-modal .modal-content {
+  background: rgba(234, 201, 156, 1);
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 90%;
+  align-content: center;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.deal-modal .close {
+  color: #555;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.deal-modal .close:hover {
+  color: black;
+}
+
+#dealForm input[type="submit"] {
+    background-color: olivedrab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
 }
 
-.modal-body {
-    width: 100%;
+#dealForm input[type="submit"]:hover {
+    background-color: rgb(78, 123, 5);
 }
 
-.modal-body form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
-}
-
-.modal-body label {
-    font-weight: bold;
-    margin-top: 5px;
-    align-self: flex-start;
-}
-
-.modal-body input[type="text"],
-.modal-body input[type="password"],
-.modal-body input[type="email"] {
-    width: 100%;
-    padding: 8px 120px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.close {
+.modal .close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -302,7 +310,7 @@ input[type="checkbox"] {
 }
 
 #btnOrder:hover {
-    background: darkgreen;
+    background-color: rgb(78, 123, 5);
 }
 
 /* ---------------------- Modal ---------------------- */

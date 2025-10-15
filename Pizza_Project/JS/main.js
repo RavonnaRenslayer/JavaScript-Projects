@@ -74,27 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const openBtn = document.getElementById("openSignup");
-  const popupForm = document.getElementById("popupForm");
-  const closeBtn = popupForm.querySelector(".close");
-
-  openBtn.addEventListener("click", () => {
-    popupForm.classList.add("show");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    popupForm.classList.remove("show");
-  });
-
-  // Optional: close when clicking outside modal content
-  popupForm.addEventListener("click", (e) => {
-    if (e.target === popupForm) popupForm.classList.remove("show");
-  });
-});
-
-
 function getReceipt() {
     //This initializes our string so it can get passed from
     //function to function, growing line by line into a full receipt
@@ -182,4 +161,28 @@ function getTopping(runningTotal, text1) {
       modal.style.display = "none";
     }
   };
-}
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dealBtn = document.getElementById("dealSignupBtn");
+  const dealPopup = document.getElementById("dealPopupForm");
+
+  // Only run this if the elements exist (prevents console errors)
+  if (!dealBtn || !dealPopup) return;
+
+  const dealClose = dealPopup.querySelector(".close");
+
+  dealBtn.addEventListener("click", () => {
+    dealPopup.classList.add("show");
+  });
+
+  dealClose.addEventListener("click", () => {
+    dealPopup.classList.remove("show");
+  });
+
+  dealPopup.addEventListener("click", (e) => {
+    if (e.target === dealPopup) {
+      dealPopup.classList.remove("show");
+    }
+  });
+});
