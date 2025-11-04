@@ -1,0 +1,182 @@
+/**** GENERAL STYLING ****/
+
+/* Affects entire document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: Avant Garde, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+body.fade-out {
+    opacity: .1;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.white-text {
+    color: #fff;
+    padding-top: 10vh;
+}
+
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+p:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform:  scale(1.1);
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+q {
+    font-style: italic;
+}
+
+img {
+    filter: grayscale();
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto auto auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+}
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+
+/**** END OF GENERAL STYLING ****/
+
+/* Navbar Styling */
+.Navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+@keyframes moveNav {
+    from{left:-100vw;}
+    to{left: 0vw;}
+}
+
+/*Navbar Links */
+.Navbar a {
+    float: left;
+    display: block;
+    color:white;
+    padding: .75vw 1vw;
+    text-decoration: none;
+    font-family: Avant Garde, Helvetice;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75ms;
+}
+
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/*Navbar hover effects */
+.Navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+/* Navbar home button */
+.Navbar a.active {
+    background-color: darkgray;
+}
+
+/***** End of Navbar Styling *****/
+
+/***** Video Styling *****/
+#Typing_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px;) {
+    #Typing_Video {
+        display: none;
+    }
+}
+
+/* Texts over the video */
+.Video_Text {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2vh;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+/***** End of Video Styling *****/
+
+/***** Slideshow Styling *****/

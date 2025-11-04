@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+    <head>
+	
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width"/>
+
+        <title>Juliana Rocha</title>
+
+        <link rel="shortcut icon" type="" href="">
+        <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+		
+    </head>
+
+    <!-- Body -->
+	<body class="Background">
+
+        <!-- Navbar -->
+         <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+
+            <!-- New section added -->
+             <a href="Slideshow">Slideshow</a>
+             <a href="About">About</a>
+             <a href="GitHub">GitHub</a>
+             
+         </div>
+
+        <!-- Background video -->
+         <div id="Home">
+            <video autoplay muted loop id="">
+                <source src="" type="">
+            </video>
+         </div>
+
+        <!-- Video text -->
+         <div class="Video_Text">
+            <h1 class="white-text">Juliana Rocha</h1>
+            <strong>
+                <p class="center">
+
+                    <q>Code is my canvas, and I paint digital masterpieces. I bring ideas to life one line of code at a time.
+                        <br>When I’m not lost in the world of code, I’m probably thinking about the next big idea to bring to life.
+                    </q>
+                    <br> Hi, I’m Juliana Rocha — a Web & Software Developer passionate about building smart, scalable, and user-friendly digital solutions.
+                    <br>
+                    <br> Explore my portfolio to see how I bring ideas to life through technology.
+                    </q>
+
+                </p>
+            </strong>
+         </div>
+
+        <!-- Slideshow section -->
+         <div id="Slideshow">
+            <div id="Slideshow_Container">
+
+                 <div class="mySlides fade">
+
+                    <!-- Slide 1 of 6 -->
+                     <img class="Slideshow_Images" src="" alt="">
+                     <div class="text">
+
+                     </div>
+
+                     <!-- Slide 2 of 6 -->
+                     <img class="Slideshow_Images" src="" alt="">
+                     <div class="text">
+                        
+                     </div>
+
+                     <!-- Slide 3 of 6 -->
+                     <img class="Slideshow_Images" src="" alt="">
+                     <div class="text">
+                        
+                     </div>
+
+                     <!-- Slide 4 of 6 -->
+                     <img class="Slideshow_Images" src="" alt="">
+                     <div class="text">
+                        
+                     </div>
+
+                     <!-- Slide 5 of 6 -->
+                     <img class="Slideshow_Images" src="" alt="">
+                     <div class="text">
+                        
+                     </div>
+
+                     <!-- Slide 6 of 6 -->
+                     <img class="Slideshow_Images" src="" alt="">
+                     <div class="text">
+                        
+                     </div>
+                 </div>
+            
+
+        <!-- Previous and next buttons -->
+        <div>
+            <a class="Previous" onclick="plusSlides(-1)">&#10094</a>
+            <a class="Next" onclick="plusSlides(1)">&#10095</a>
+        </div>
+        <br>
+
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide ()"></span>
+                <span class="dot" onclick="currentSlide ()"></span>
+                <span class="dot" onclick="currentSlide ()"></span>
+                <span class="dot" onclick="currentSlide ()"></span>
+                <span class="dot" onclick="currentSlide ()"></span>
+                <span class="dot" onclick="currentSlide ()"></span>        
+            </div>
+        </div>
+    </div>
+      
+    <!-- About section -->
+     <div class="Row" id="About">
+        <!-- Left column -->
+         <div class="Column_2">
+            <img src="" alt="">
+         </div>
+
+        <!-- Right column -->
+         <div class="Column_1">
+            <h1>About</h1>
+
+                <p>
+                    I am a software developer who loves to code! With a strong foundation in modern web technologies and software engineering principles, I specialize in crafting responsive websites, developing full-stack applications, and solving real-world problems through clean and efficient code. Whether it's creating dynamic front-end experiences or architecting robust back-end systems, I focus on delivering high-quality solutions tailored to user and business needs.
+
+                    Explore my portfolio to see how I bring ideas to life through technology. 
+                    <br>
+                    <br>As a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>
+                </p>
+        </div>
+     </div>
+
+    <!-- GitHub section -->
+    <div class="Row" id="GitHub">
+        <!-- Left column -->
+         <div class="Column_1">
+            <h1>GitHub</h1>
+
+                <p>
+                    Take a look at what I've been building on GitHub:   
+                </p>
+
+                    <p class="center"><a href="https://github.com/RavonnaRenslayer" target="_blank">RavonnaRenslayer</a>
+                    </p>
+
+                    <p class="center"><a href="https://github.com/RavonnaRenslayer/HTML-and-CSS.git" target="_blank">HTML-and-CSS</a>
+                    </p>
+
+                    <p class="center"><a href="https://github.com/RavonnaRenslayer/Python---Dummy.git" target="_blank">Python---Dummy</a>
+                    </p>
+
+                    <p class="center"><a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy Github</a>
+                    </p>
+                    <p>Like what you see? Contact me to know more!</p>
+                    <p><a href="#Contact">Contact</a> me below!</p>
+
+        <!-- Right column -->
+         <div class="Column_2">
+            <a href="https://github.com/the-tech-academy" target="_blank"><img src="./Images/Github.jpeg" alt="GitHub Profile Picture"></a>
+         </div>
+         
+        </div>
+    </div>
+
+    <!-- Contact form -->
+     <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                <h1>Contact</h1>
+                    <label for="name"></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+
+                    <label for="phone"></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone" >
+
+                    <label for="email"></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+
+                    <label for="message"></label>
+                        <input type="text" placeholder="Type your message here" name="message" >
+
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+            <br>
+        </p>
+    </footer>
+
+	</body>
+	
+</html>
