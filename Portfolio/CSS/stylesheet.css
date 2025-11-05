@@ -155,7 +155,7 @@ footer {
     z-index: -1;
 }
 
-@media screen and (max-width: 576px;) {
+@media screen and (max-width: 576px) {
     #Typing_Video {
         display: none;
     }
@@ -365,50 +365,59 @@ button:hover, .form-container .btn:hover {
 /***** End of Contact Form Styling *****/
 
 /***** Media Query Section *****/
-@media screen and (max-width: 527px)
+@media screen and (max-width: 527px) {
 p {
     font-size: 3.75vw;
+    }
 }
 
-@media screen and (min-width: 528px) and (max-width: 660px)
+@media screen and (min-width: 528px) and (max-width: 660px) {
 p {
     font-size: 3.5vw;
+    }
 }
 
 
-@media screen and (min-width: 661px) and (max-width: 799px)
+@media screen and (min-width: 661px) and (max-width: 799px) {
 p {
     font-size: 2.75vw;
+    }
 }
 
-@media screen and (min-width: 800px) and (max-width: 924px)
+@media screen and (min-width: 800px) and (max-width: 924px) {
 p {
     font-size: 2.5vw;
+    }
 }
 
-@media screen and (min-width: 925px) and (max-width: 1050px)
+@media screen and (min-width: 925px) and (max-width: 1050px) {
 p {
     font-size: 2.25vw;
+    }
 }
 
-@media screen and (min-width: 1051px) and (max-width: 1310px)
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
 p {
     font-size: 2vw;
+    }
 }
 
-@media screen and (min-width: 1311px) and (max-width: 1535px)
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
 p {
     font-size: 1.75vw;
+    }
 }
 
-@media screen and (min-width: 1536px) and (max-width: 2269px)
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
 p {
     font-size: 1.5vw;
+    }
 }
 
-@media screen and (min-width: 2270px)
+@media screen and (min-width: 2270px) {
 p {
     font-size: 1.35vw;
+    }
 }
 
 @media screen and (max-width: 1080px) {
