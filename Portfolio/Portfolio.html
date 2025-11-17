@@ -30,10 +30,10 @@
 
         <!-- Background video -->
          <div id="Home">
-            <video autoplay muted loop id="">
-                <source src="./Media/Videos/Logo&Slogan.mp4" type="Introduction">
+            <video autoplay muted loop id="background-video">
+                <source src="./Media/Videos/Logo&Slogan.mp4" type="video/mp4">
             </video>
-         </div>
+         
 
         <!-- Video text -->
          <div class="Video_Text">
@@ -44,6 +44,7 @@
                     <q>Code is my canvas, and I paint digital masterpieces. I bring ideas to life one line of code at a time.
                         <br>When I’m not lost in the world of code, I’m probably thinking about the next big idea to bring to life.
                     </q>
+                    <br>
                     <br> Hi, I’m Juliana Rocha — a Web & Software Developer passionate about building smart, scalable, and user-friendly digital solutions.
                     <br>
                     <br> Explore my portfolio to see how I bring ideas to life through technology.
@@ -52,6 +53,7 @@
                 </p>
             </strong>
          </div>
+    </div>
 
         <!-- Slideshow section -->
          <div id="Slideshow">
@@ -117,13 +119,9 @@
       
     <!-- About section -->
      <div class="Row" id="About">
-        <!-- Left column -->
-         <div class="Column_2">
-            <img src="./Media/Images/Main_1.png" alt="Juliana engaged with technology">
-         </div>
-
-        <!-- Right column -->
-         <div class="Column_1">
+         <div class="About_Image">         
+         
+         <div class="About_Text">
             <h1>About</h1>
 
                 <p>
@@ -136,8 +134,9 @@
                 </p>
         </div>
      </div>
+</div>
 
-    <!-- GitHub section -->
+<!-- GitHub section -->
     <div class="Row" id="GitHub">
         <!-- Left column -->
          <div class="Column_1">
@@ -160,20 +159,27 @@
                     </p>
                     <p>Like what you see? Contact me to know more!</p>
                     <p><a href="#Contact">Contact</a> me below!</p>
+        </div>
 
         <!-- Right column -->
          <div class="Column_2">
-            <a href="https://github.com/the-tech-academy" target="_blank"><img src="./Media/Images/Github.jpeg" alt="GitHub Profile Picture"></a>
-         </div>
-         
+            <a href="https://github.com/the-tech-academy" target="_blank">
+                <img src="./Media/Images/Github.jpeg" alt="GitHub Profile Picture"></a>       
+        </a>        
         </div>
     </div>
 
     <!-- Contact form -->
-     <div id="Contact">
+    <div  class="Row" id="Contact">
+
+    <div class="Column_1">
         <img src="./Media/Images/Contact.jpeg" alt="Contact_Image">
-        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
-        <div class="form-popup" id="myForm">
+    </div>
+
+    <div class="Column_2">
+    <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        
+    <div class="form-popup" id="myForm">
             <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
                 <h1>Contact</h1>
                     <label for="name"></label>
@@ -192,8 +198,8 @@
                         <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
             </form>
         </div>
-     </div>
-
+    </div>
+</div>
     <!-- Footer -->
     <footer>
         <p>
