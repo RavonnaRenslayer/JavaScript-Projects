@@ -71,7 +71,7 @@ p:hover {
 }
 
 a {
-    color: blue;
+    color: red;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -198,7 +198,7 @@ footer {
     z-index: 10;
     margin-top: 50vh;
     text-align: center;
-    animation: moveVideoText 5.75s; ease-out forwards;
+    animation: moveVideoText 5.75s ease-out forwards;
 }
 
 .Video_Text {
@@ -239,11 +239,28 @@ footer {
 /***** End of Video Styling *****/
 
 /***** Slideshow Styling *****/
-#Slideshow_Images {
-    vertical-align: middle;
-    height: auto;
-    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75);
+.Slideshow_Images {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    height: 100%;
     width: 100%;
+    margin: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75);
+    object-fit: contain;
+}
+
+.mySlides {
+    display: none; 
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Next and previous buttons */
@@ -326,7 +343,7 @@ footer {
     margin-top: -30vh;
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .About_Image::before {
@@ -386,19 +403,28 @@ footer {
 }
 
 #GitHub .Column_1 {
-    background-color: rgba(101, 114, 126, 0.8); /* text column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(67, 89, 110, 0.8); /* text column */
     color: white;
 }
+
+#GitHub .Column_1 p, a {
+    text-align: center;
+    line-height: 1;
+}
+
 #GitHub .Column_2 {
-    background-color: rgb(99, 4, 4);  /* image column */
+    background-color: rgba(99, 4, 4, 0.863);  /* image column */
 }
 
 /* Contact Section */
 #Contact .Column_1 {
-    background-color: rgb(99, 4, 4);  /* image column */
+    background-color: rgba(99, 4, 4, 0.863);  /* image column */
 }
 #Contact .Column_2 {
-    background-color: rgba(101, 114, 126, 0.8); /* button/form column */
+    background-color: rgba(67, 89, 110, 0.8); /* button/form column */
 }
 
 .Column_2 img,
@@ -437,6 +463,8 @@ footer {
     bottom: 1.75vw;
     right: 1.75vw;
     width: 25vw;
+    max-width: 90%;
+    box-sizing: border-box;
     background-color: white;
     color: black;
     border: solid black;
@@ -509,6 +537,14 @@ button:hover, .form-container .btn:hover {
     border-color: black;
 }
 /***** End of Contact Form Styling *****/
+
+/***** Footer *****/
+.footer {
+    background-color: rgba(99, 4, 4, 0.863);
+    color: white;
+    padding: 1px;
+}
+
 
 /***** Media Query Section *****/
 @media screen and (max-width: 527px) {
