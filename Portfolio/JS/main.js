@@ -1,10 +1,34 @@
+//Navbar
+document.querySelectorAll('.Navbar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const navbarHeight = document.querySelector('.Navbar').offsetHeight;
+        window.scrollTo({
+            top: target.offsetTop - navbarHeight, // adjust for navbar height
+            behavior: 'smooth'
+        });
+    });
+});
+
+//Video background
+const video = document.getElementById('background-video');
+
+video.addEventListener('ended', () => {
+    video.currentTime = 0;
+    video.onplay();
+});
+
 // These functions open and close the contact form
 function openForm() {
     document.getElementById("myForm").style.display = "block";
+    document.getElementById("blur-overlay").style.display = "block";
 }
 
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
+    document.getElementById("blur-overlay").style.display = "none";
+
 }
 
 // Slideshow
@@ -43,7 +67,7 @@ function showSlides (n) {
 }
 
 document.addEventListener("click", function(event) {
-    if (event.target.matched(".cancel") || !event.target.closest(".form-popup") &&
+    if (event.target.matches(".cancel") || !event.target.closest(".form-popup") &&
         !event.target.closest(".Pop_Up_Button") && !event.target.closest(".contact")) {
             closeForm()
         }

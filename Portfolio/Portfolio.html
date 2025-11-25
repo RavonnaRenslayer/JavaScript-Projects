@@ -18,98 +18,64 @@
 	<body class="Background">
 
         <!-- Navbar -->
-         <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-
-            <!-- New section added -->
-             <a href="Slideshow">Slideshow</a>
-             <a href="About">About</a>
-             <a href="GitHub">GitHub</a>
-             
-         </div>
+        <nav class="Navbar">
+            <a href=#Home class="active">Home</a>
+             <a href="#Slideshow">Slideshow</a>
+             <a href="#About">About</a>
+             <a href="#GitHub">GitHub</a>
+        </nav>
 
         <!-- Background video -->
-         <div id="Home">
-            <video autoplay muted loop id="background-video">
-                <source src="./Media/Videos/Logo&Slogan.mp4" type="video/mp4">
-            </video>
+        <section id="Home">
+    <div id="Video_Section">
+        <video id="background-video" autoplay muted loop playsinline>
+            <source src="../Portfolio/Media/Videos/Background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-        <!-- Video text -->
-         <div class="Video_Text">
-            <h1 class="white-text">Juliana Rocha</h1>
-            <strong>
+        <div class="Video_Text_Wrapper">
+            <div class="Video_Text">
+                <h1 class="white-text">Juliana Rocha</h1>
                 <p class="center">
-
-                    <q>Code is my canvas, and I paint digital masterpieces. I bring ideas to life one line of code at a time.
-                        <br>When I’m not lost in the world of code, I’m probably thinking about the next big idea to bring to life.
-                    </q>
-                    <br>
-                    <br> Hi, I’m Juliana Rocha — a Web & Software Developer passionate about building smart, scalable, and user-friendly digital solutions.
-                    <br>
-                    <br> Explore my portfolio to see how I bring ideas to life through technology.
-                    </q>
-
+                    <q>Code is my canvas, and I paint digital masterpieces. I bring ideas to life one line of code at a time.</q>
                 </p>
-            </strong>
-         </div>
-    </div>
-
-        <!-- Slideshow section -->
-         <div id="Slideshow">
-            <div id="Slideshow_Container">
-
-                 <div class="mySlides fade">
-
-                    <!-- Slide 1 of 4 -->
-                     <img class="Slideshow_Images" src="../Portfolio/Media/Images/Contact.jpeg" alt="Juliana Rocha">
-                     <div class="text"></div>
-
-                     </div>
-                 <div class="mySlides fade">
-
-                     <!-- Slide 2 of 4 -->
-                     <img class="Slideshow_Images" src="../Portfolio/Media/Images/Pizza_Drill.png" alt="Pizza website for order placement">
-                     <div class="text"></div>
-                        
-                     </div>
-                 <div class="mySlides fade">
-
-                     <!-- Slide 3 of 4 -->
-                     <img class="Slideshow_Images" src="../Portfolio/Media/Images/TICTACTOE.png" alt="TICTACTOE Game">
-                     <div class="text"></div>
-                        
-                     </div>
-                     
-                 <div class="mySlides fade">
-                     <!-- Slide 4 of 4 -->
-                     <img class="Slideshow_Images" src="../Portfolio/Media/Images/Calculator.png" alt="Calculator">
-                     <div class="text"></div>
-                        
-                     </div>
-
-                     </div>
-                 </div>
-            
-
-        <!-- Previous and next buttons -->
-        <div>
-            <a class="Previous" onclick="plusSlides(-1)">&#10094</a>
-            <a class="Next" onclick="plusSlides(1)">&#10095</a>
-        </div>
-        <br>
-
-            <div style="text-align: center">
-                <span class="dot" onclick="currentSlide ()"></span>
-                <span class="dot" onclick="currentSlide ()"></span>
-                <span class="dot" onclick="currentSlide ()"></span>
-                <span class="dot" onclick="currentSlide ()"></span>     
             </div>
         </div>
     </div>
-      
+</section>
+
+<!-- Slideshow Section -->
+<div id="Slideshow">
+    <div id="Slideshow_Container">
+        <div class="mySlides fade">
+            <img class="Slideshow_Images" src="../Portfolio/Media/Images/Contact.jpeg" alt="">
+        </div>
+        <div class="mySlides fade">
+            <img class="Slideshow_Images" src="../Portfolio/Media/Images/Pizza_Drill.png" alt="">
+        </div>
+        <div class="mySlides fade">
+            <img class="Slideshow_Images" src="../Portfolio/Media/Images/TICTACTOE.png" alt="">
+        </div>
+        <div class="mySlides fade">
+            <img class="Slideshow_Images" src="../Portfolio/Media/Images/Calculator.png" alt="">
+        </div>
+
+        <!-- Controls -->
+        <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Dots -->
+        <div style="text-align:center; margin-top: 1rem;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
     <!-- About section -->
      <div class="Row" id="About">
-         <div class="About_Image">         
+         <div class="About_Image" aria-hidden="true"></div>         
          
          <div class="About_Text">
             <h1>About</h1>
@@ -123,7 +89,6 @@
                     <br>
                 </p>
         </div>
-     </div>
 </div>
 
 <!-- GitHub section -->
@@ -160,6 +125,7 @@
     </div>
 
     <!-- Contact form -->
+    <div id="blur-overlay"></div>
     <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
         
     <div class="form-popup" id="myForm">
@@ -178,10 +144,10 @@
                         <input type="text" placeholder="Type your message here" name="message" >
 
                         <button type="submit" class="btn">SUBMIT</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                        <button type="button" class="close-btn" onclick="closeForm()">x</button>
             </form>
         </div>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <p>
