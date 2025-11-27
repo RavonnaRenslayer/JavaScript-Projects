@@ -622,15 +622,14 @@ button:hover, .form-container .btn:hover {
 /***** End of Contact Form Styling *****/
 
 /***** Footer *****/
-footer {
-    position: relative;
+#footer {
+    position: absolute;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
     background: black;;
     color: white;
-    height: 100px;
-    z-index: 9999;
+    width: 100%;
 }
 
 .footer a {
