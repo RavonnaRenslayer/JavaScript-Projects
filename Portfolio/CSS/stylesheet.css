@@ -15,7 +15,7 @@ html {
 /* Body */
 body {
     display: flex;
-    margin: 0%;
+    margin: 0;
     opacity: 1;
     transition: 3s opacity;
     letter-spacing: .2vw;
@@ -169,25 +169,24 @@ img:hover {
     height: auto;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    padding-bottom: 0;
+    overflow: visible;
 }
 
 /***** Video Styling *****/
 #Video_Section {
     position: relative;
-    height: 100vh;   /* ensures slideshow starts AFTER video */
+    height: 100vh;   
     width: 100%;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
 }
 
 #background-video {
-    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 25%;
-    margin-top: 0;
     z-index: -1;
     background-color: black;
 }
@@ -268,17 +267,20 @@ img:hover {
     position: relative;
     width: 100%;
     z-index: 1;
-    margin-top: -70vh; 
+    top: 30%; 
     padding: 2rem 0;
     background: transparent;
     scroll-margin-top: 30vh;
+    max-height: 60vh;
+    margin: -70vh auto 2rem;
+    padding: 2rem 0;
 }
 
 #Slideshow_Container {
-    position: relative;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     height: auto;
+    
 }
 
 /* Next and previous buttons */
@@ -424,7 +426,7 @@ img:hover {
 
     .About_Image {
         height: auto;            
-        min-height: 100vh;     
+        min-height: 60vh;     
         display: block;           
     }
 
@@ -479,7 +481,7 @@ img:hover {
 }
 
 #Home, #About, #GitHub {
-    scroll-margin-top: 120vh; /* matches fixed navbar height */
+    scroll-margin-top: 60px; /* matches fixed navbar height */
     min-height: 100vh;
 }
 
@@ -621,13 +623,14 @@ button:hover, .form-container .btn:hover {
 
 /***** Footer *****/
 footer {
-    padding: 1rem 2rem;
+    position: relative;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
     background: black;;
     color: white;
-    margin-top: auto;
+    height: 100px;
+    z-index: 9999;
 }
 
 .footer a {
