@@ -9,7 +9,7 @@ html, body {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 40px;
+    scroll-padding-top: 60px;
 }
 
 /* Body */
@@ -264,16 +264,17 @@ img:hover {
 }
 
 #Slideshow {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 80%;
     z-index: 1;
-    top: 30%; 
-    padding: 2rem 0;
+    top: 5%; 
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 1;
     background: transparent;
-    scroll-margin-top: 30vh;
-    max-height: 60vh;
-    margin: -70vh auto 2rem;
-    padding: 2rem 0;
+    padding: 1rem;
+
+
 }
 
 #Slideshow_Container {
@@ -623,7 +624,7 @@ button:hover, .form-container .btn:hover {
 
 /***** Footer *****/
 #footer {
-    position: absolute;
+    position: relative;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
