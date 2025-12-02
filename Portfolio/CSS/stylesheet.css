@@ -646,6 +646,10 @@ button:hover, .form-container .btn:hover {
 
 /* Tablets */
 @media screen and (max-width: 1024px) {
+    html, body {
+    overflow-x: hidden;
+    }
+
     body {
         font-size: 1.2vw;
     }
@@ -667,19 +671,20 @@ button:hover, .form-container .btn:hover {
     }
 
     .About {
-        position: relative;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         min-height: 100vh;
         width: 100%;
         overflow: hidden;
+        box-sizing: border-box;
+        padding: 1rem;
     }
 
     .About_Image {
         flex: 1 1 100%;
-        min-height: 100vh;
+        height: auto;
         max-width: 100%;
         width: 100%;
         background-image: url('../Media/Images/Main_1.png');
@@ -687,35 +692,37 @@ button:hover, .form-container .btn:hover {
         background-repeat: no-repeat;
         background-position: center;
         filter: grayscale(60%);
+        box-sizing: border-box;
  }
 
     .About_Text {
-        position: absolute;     /* FIX: Must be absolute for overlay */
-        top: 50%;
-        left: 60%;              /* adjust horizontal position */
-        transform: translate(-10%, -50%);
-        max-width: 50%;
+        flex: 0 0 auto;
+        top: 5%;
+        padding: 0;
+        max-width: 90%;
+        width: 40%;
         color: white;
         text-align: left;
-        z-index: 2;
+        z-index: 1;
+        margin: 0 auto 0 auto;
+        box-sizing: border-box;
  }
 
     #Slideshow {
-        position: absolute;
+        position: relative;
         width: 90%;
         transform: none;
         z-index: 2;
-        top: -10%;
-        left: 50%;
-        transform: translate(-50%, 50%);
+        top: 0;
+        left: 0;
+        margin: -40% auto 0 auto;
     }
 
     .mySlides img, .Slideshow_Images {
-        max-height: 300px;    /* smaller height */
+        max-height: 350px;    /* smaller height */
         width: auto;          /* keep aspect ratio */
         object-fit: contain;  /* scale image properly */
         margin: 0 auto;
-        display: block;
     }
 
     .Previous, .Next {
@@ -751,14 +758,18 @@ button:hover, .form-container .btn:hover {
     }
 
     .About {
-        flex-direction: column;  /* stack image and text vertically */
+        flex-direction: column;
+        align-items: center;  /* stack image and text vertically */
         min-height: auto;
     }
 
     .About_Image {
         flex: 1 1 100%;
         min-height: 200px;
+        margin: 1rem auto;
+        max-width: 90%;
         width: 100%;
+        text-align: center;
     }
 
     .About_Text {
@@ -776,7 +787,7 @@ button:hover, .form-container .btn:hover {
     }
 
     .mySlides img, .Slideshow_Images {
-        max-height: 250px;    /* smaller height */
+        max-height: 300px;    /* smaller height */
         width: auto;          /* keep aspect ratio */
         margin: auto;
         height: 100%;
@@ -812,6 +823,15 @@ button:hover, .form-container .btn:hover {
 }
 
 @media screen and (max-width: 640px) {
+
+    #Video_Section, #background-video {
+        max-height: 250px;
+        width: 100%;
+        height: 100px;        /* allow content to define height */
+        object-fit: cover;
+        object-position: center;
+    }
+
     .About {
         display: flex;
         flex-direction: column;
@@ -830,6 +850,15 @@ button:hover, .form-container .btn:hover {
         filter: grayscale(60%);
     }
     
+     .About_Text {
+        position: relative;     
+        max-width: 90%;
+        margin-top: 1rem;
+        text-align: center;
+        left: 0;
+        transform: none;
+    }
+
     #Slideshow {
         width: 95%;
         margin: 0 auto;
@@ -856,128 +885,58 @@ button:hover, .form-container .btn:hover {
 
 /* Extra small phones */
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 4vw;
-    }
 
-    h1 {
-        font-size: 6vw;
-    }
-
-    .Navbar a {
-        font-size: 4vw;
-    }
-
- #Home, #Video_Section {
-        min-height: auto;
-        height: auto;        /* allow content to define height */
-        overflow: hidden;
-        padding: 0;
-        margin: 0;
-    }
-
-    #background-video {
-        width: 100%;
-        height: auto;
-        max-height: 250px; /* small screen limit */
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .Video_Text_Wrapper {
-        top: 0;
-        padding: 0.5rem 1rem;
-    }
-
-    .Video_Text {
-        font-size: 4vw;
-        padding: 0.5rem;
-        line-height: 1.2;
-    }
-
-    /* ================= About Section ================= */
     .About {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
-        padding: 1rem 0.5rem;
-        min-height: auto;
-        height: auto;
-    }
-
-    .About_Image {
-        width: 100%;
-        height: auto;         /* let image define container height */
-        min-height: 150px;    /* optional lower limit */
-        background-image: url('../Media/Images/Main_1.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        filter: grayscale(60%);
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 1rem !important;
+        gap: 1rem !important;
     }
 
     .About_Text {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        max-width: 90%;
-        margin: 0.5rem auto;
-        text-align: center;
-        color: white;
-        font-size: 4vw;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        font-size: 4.5vw !important;   /* bigger and readable */
+        line-height: 1.4 !important;
+        color: white !important;
+        z-index: 2 !important;
+        padding: 0.5rem !important;
+        box-sizing: border-box !important;
     }
 
-    /* ================= Slideshow ================= */
     #Slideshow {
-        width: 95%;
-        max-width: 100%;
-        margin: 1rem auto;
-        padding: 0;
-        position: relative;
-        transform: none;
+        position: relative !important;
+        width: 95% !important;
+        margin: 1rem auto !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        z-index: 2 !important;
+        padding: 0 !important;
     }
 
     .mySlides img, .Slideshow_Images {
-        width: 100%;
-        height: auto;       /* do not stretch */
-        max-height: 200px;  /* fit small screen */
-        display: block;
-        margin: 0 auto;
-        object-fit: contain;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 200px !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
     }
 
-    .Previous, .Next {
-        font-size: 6vw;
-        padding: 2px;
-    }
-
-    .text {
-        font-size: 5vw;
-        padding: 0.25rem;
-    }
-
-    /* ================= Pop-up Button ================= */
-    .Pop_Up_Button {
-        width: 70%;
-        bottom: 3vw;
-        right: 15%;
-        font-size: 4vw;
-    }
-
-    .Previous, .Next {
-        font-size: 5vw;
-    }
-
-    .text {
-        font-size: 5vw;
-    }
-
-    .Pop_Up_Button {
-        width: 70%;
-        bottom: 3vw;
-        right: 15%;
+    #Video_Section, #background-video {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        object-fit: cover !important;
+        object-position: center !important;
     }
 }
