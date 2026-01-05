@@ -1,0 +1,314 @@
+.container {
+    width: 90%;
+    max-width: 2024px;
+    min-width: 100%;
+    margin: auto;
+}
+
+.container .h-name {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 5%;
+    margin-bottom: 100px;
+}
+
+.container .h-name h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #232323;
+}
+
+.container .h-name h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: rgb(147, 11, 11);
+}
+
+/*About*/
+.container .h-about {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 100px;
+}
+
+.container .about .h-title-about {
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 2px solid rgb(147, 11, 11);
+    margin-bottom: 25px;
+}
+
+.container .about .h-title-about  h2{
+    margin-top: 5%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .about .paragraph {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*Experience*/
+.container .h-experience .h-title-experience {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(147, 11, 11);
+    margin-bottom: 50px;
+}
+
+.container .h-experience .h-title-experience  h2 {
+    margin-top: 5%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-experience .h-items {
+    width: 100%;
+    min-height: 100px;
+}
+
+.container .h-experience .h-items .item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 220px;
+}
+
+.container .h-experience .h-items .item .work {
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 100px;
+}
+
+.container .h-experience .h-items .item .work h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-experience .h-items .item .work p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 22px;    
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-experience .h-items .item .description {
+    width: 75%;
+    min-height: 100px;
+}
+
+.container .h-experience .h-items .item .description h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: rgb(147, 11, 11);
+}
+
+.container .h-experience .h-items .item .description p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+    color: #000000;
+}
+
+/*Certifications*/
+.container .h-certification {
+    width: 100%;
+    min-height: 100px;
+}
+
+.container .h-certification .h-title-certification {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(147, 11, 11);
+    margin-bottom: 50px;
+}
+
+.container .h-certification .h-title-certification h2 {
+    margin: 5%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #000000;    
+}
+
+.container .h-certification .item {
+    width: 100%;
+    height: 220px;   
+}
+
+.container .h-certification .item .title {
+    margin-bottom: 10px;  
+}
+
+.container .h-certification .item .title h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #232323;
+}
+
+.container .h-certification .item .title span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(147, 11, 11);
+}
+
+.container .h-certification .item .title p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    text-align: justify;
+    font-size: 18px;
+    color: #000000;
+}
+
+/*Skills*/
+.container .skills {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 100px;
+}
+
+.container .skills .h-title-skills {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(147, 11, 11);
+    margin-bottom: 50px;
+}
+
+.container .skills .h-title-skills h2 {
+    margin-top: 5%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-skills .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.container .h-skills .item .title {
+    min-width: 150px;
+
+}
+
+.container .h-skills .item h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-skills .item .icon {
+    position: relative;
+    width: 200px;
+    height: 18px;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    border-radius: 6px;
+    background: transparent;
+}
+
+/*Percentage*/
+.container .h-skills .item .icon .percentage-10 {
+    width: 110px;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgb(147, 11, 11);
+}
+
+.container .h-skills .item .icon .percentage-50 {
+    width: 150px;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgb(147, 11, 11);
+}
+
+.container .h-skills .item .icon .percentage-80 {
+    width: 180px;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgb(147, 11, 11);
+}
+
+.container .h-skills .item .icon .percentage-100 {
+    width: 200px;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgb(147, 11, 11);
+}
+
+/* Contact */
+.container .h-contact {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 50px;
+}
+
+.container .h-contact .h-title-contact {
+    width: 100%;
+    min-height: 50;
+    border-bottom: 2px solid rgb(147, 11, 11);  
+    margin-bottom: 50px;  
+}
+
+.container .h-contact .h-title-contact h2 {
+    margin-top: 5%;
+    font-family: 'Oswald', sans-serif; 
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-contact .item {
+    width: 100%;
+    min-height: 80px;
+}
+
+.container .h-contact .item h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container .h-contact .item p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgb(147, 11, 11);
+}
