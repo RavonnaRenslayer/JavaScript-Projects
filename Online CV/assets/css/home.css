@@ -12,7 +12,7 @@
     margin-bottom: 100px;
 }
 
-.container .h-name h1 {
+.container .h-name, h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 48px;
@@ -20,7 +20,7 @@
     color: #232323;
 }
 
-.container .h-name h2 {
+.container .h-name, h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 32px;
@@ -42,7 +42,7 @@
     margin-bottom: 25px;
 }
 
-.container .about .h-title-about  h2{
+.container .about .h-title-about, h2{
     margin-top: 5%;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
@@ -59,14 +59,14 @@
 }
 
 /*Experience*/
-.container .h-experience .h-title-experience {
+.container .experience, .h-title-experience {
     width: 100%;
     height: 50px;
     border-bottom: 2px solid rgb(147, 11, 11);
     margin-bottom: 50px;
 }
 
-.container .h-experience .h-title-experience  h2 {
+.container .experience .h-title-experience, h2 {
     margin-top: 5%;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
@@ -75,25 +75,25 @@
     color: #000000;
 }
 
-.container .h-experience .h-items {
+.container .experience, .h-items {
     width: 100%;
     min-height: 100px;
 }
 
-.container .h-experience .h-items .item {
+.container .experience, .h-items, .item {
     display: flex;
     flex-direction: row;
     width: 100%;
     min-height: 220px;
 }
 
-.container .h-experience .h-items .item .work {
+.container .experience .h-items, .item, .work {
     min-width: 25%;
     max-width: 25%;
     min-height: 100px;
 }
 
-.container .h-experience .h-items .item .work h2 {
+.container .experience .h-items, .item, .work, h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 22px;
@@ -102,7 +102,7 @@
     color: #000000;
 }
 
-.container .h-experience .h-items .item .work p {
+.container .experience .h-items, .item, .work, p {
     font-family: 'Oswald', sans-serif;
     font-weight: normal;
     font-size: 22px;    
@@ -110,12 +110,12 @@
     color: #000000;
 }
 
-.container .h-experience .h-items .item .description {
+.container .experience .h-items, .item, .description {
     width: 75%;
     min-height: 100px;
 }
 
-.container .h-experience .h-items .item .description h2 {
+.container .experience .h-items .item, .description, h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 22px;
@@ -124,7 +124,7 @@
     color: rgb(147, 11, 11);
 }
 
-.container .h-experience .h-items .item .description p {
+.container .experience .h-items .item, .description, p {
     font-family: 'Oswald', sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -133,19 +133,19 @@
 }
 
 /*Certifications*/
-.container .h-certification {
+.container .certification {
     width: 100%;
     min-height: 100px;
 }
 
-.container .h-certification .h-title-certification {
+.container .certification, .h-title-certification {
     width: 100%;
     height: 50px;
     border-bottom: 2px solid rgb(147, 11, 11);
     margin-bottom: 50px;
 }
 
-.container .h-certification .h-title-certification h2 {
+.container .certification .h-title-certification, h2 {
     margin: 5%;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
@@ -154,16 +154,16 @@
     color: #000000;    
 }
 
-.container .h-certification .item {
+.container .certification, .item {
     width: 100%;
     height: 220px;   
 }
 
-.container .h-certification .item .title {
+.container .certification .item, .title {
     margin-bottom: 10px;  
 }
 
-.container .h-certification .item .title h2{
+.container .certification .item, .title, h2{
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 22px;
@@ -171,7 +171,7 @@
     color: #232323;
 }
 
-.container .h-certification .item .title span {
+.container .certification .item, .title, span {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 22px;
@@ -179,7 +179,7 @@
     color: rgb(147, 11, 11);
 }
 
-.container .h-certification .item .title p {
+.container .certification .item, .title, p {
     font-family: 'Oswald', sans-serif;
     font-weight: normal;
     text-align: justify;
@@ -194,14 +194,14 @@
     margin-bottom: 100px;
 }
 
-.container .skills .h-title-skills {
+.container .skills, .h-title-skills {
     width: 100%;
     height: 50px;
     border-bottom: 2px solid rgb(147, 11, 11);
     margin-bottom: 50px;
 }
 
-.container .skills .h-title-skills h2 {
+.container .skills .h-title-skills, h2 {
     margin-top: 5%;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
@@ -210,7 +210,7 @@
     color: #000000;
 }
 
-.container .h-skills .item {
+.container .skills, .item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -218,12 +218,11 @@
     margin-bottom: 20px;
 }
 
-.container .h-skills .item .title {
+.container .skills .item, .title {
     min-width: 150px;
-
 }
 
-.container .h-skills .item h2 {
+.container .skills, .item, h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -231,7 +230,7 @@
     color: #000000;
 }
 
-.container .h-skills .item .icon {
+.container .skills .item, .icon {
     position: relative;
     width: 200px;
     height: 18px;
@@ -242,28 +241,28 @@
 }
 
 /*Percentage*/
-.container .h-skills .item .icon .percentage-10 {
+.container .skills .item .icon, .percentage-10 {
     width: 110px;
     height: 100%;
     border-radius: 6px;
     background-color: rgb(147, 11, 11);
 }
 
-.container .h-skills .item .icon .percentage-50 {
+.container .skills .item .icon, .percentage-50 {
     width: 150px;
     height: 100%;
     border-radius: 6px;
     background-color: rgb(147, 11, 11);
 }
 
-.container .h-skills .item .icon .percentage-80 {
+.container .skills .item .icon, .percentage-80 {
     width: 180px;
     height: 100%;
     border-radius: 6px;
     background-color: rgb(147, 11, 11);
 }
 
-.container .h-skills .item .icon .percentage-100 {
+.container .skills .item .icon, .percentage-100 {
     width: 200px;
     height: 100%;
     border-radius: 6px;
@@ -271,20 +270,20 @@
 }
 
 /* Contact */
-.container .h-contact {
+.container .contact {
     width: 100%;
     min-height: 200px;
     margin-bottom: 50px;
 }
 
-.container .h-contact .h-title-contact {
+.container .contact, .h-title-contact {
     width: 100%;
     min-height: 50;
     border-bottom: 2px solid rgb(147, 11, 11);  
     margin-bottom: 50px;  
 }
 
-.container .h-contact .h-title-contact h2 {
+.container .h-contact .h-title-contact, h2 {
     margin-top: 5%;
     font-family: 'Oswald', sans-serif; 
     font-weight: bold;
@@ -298,7 +297,7 @@
     min-height: 80px;
 }
 
-.container .h-contact .item h2 {
+.container .h-contact .item, h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -306,7 +305,7 @@
     color: #000000;
 }
 
-.container .h-contact .item p {
+.container .h-contact .item, p {
     font-family: 'Oswald', sans-serif;
     font-weight: normal;
     font-size: 18px;
